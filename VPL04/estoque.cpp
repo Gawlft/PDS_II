@@ -1,10 +1,17 @@
+#include <vector>
+#include <iostream>
 #include "fogao.hpp"
 #include "geladeira.hpp"
 #include "estoque.hpp"
 
-Estoque::Estoque(){/*TODO*/}
+Estoque::Estoque(std::vector<Geladeira> geladeiras, std::vector<Fogao> fogoes){
+    _geladeiras = geladeiras;
+    _fogoes = fogoes;
+    };
 
-void Estoque::armazena_geladeira(int capacidade, int portas){/*TODO*/}
+void Estoque::armazena_geladeira(int capacidade, int portas){/*TODO*/
+
+}
 
 void Estoque::vende_geladeira(int capacidade, int portas){/*TODO*/}
 

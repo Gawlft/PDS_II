@@ -1,14 +1,14 @@
 #include <iostream>
 
 // Comentar / Excluir a linha abaixo:
-#include "old.hpp"
+//#include "old.hpp"
 
 // Descomentar o bloco abaixo:
-/*
+
 #include "estoque.hpp"
 #include "geladeira.hpp"
 #include "fogao.hpp"
-*/
+
 
 // Não modifique a função main
 int main() {

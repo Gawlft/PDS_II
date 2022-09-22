@@ -10,12 +10,12 @@
 class Estoque {
 
     private:
-        std::vector<Geladeira> geladeiras;
-        std::vector<Fogao> fogoes;
+        std::vector<Geladeira> _geladeiras;
+        std::vector<Fogao> _fogoes;
 
     public:
 
-        Estoque();
+        Estoque(std::vector<Geladeira> geladeiras, std::vector<Fogao> fogoes);
 
         void armazena_geladeira(int capacidade, int portas);
 

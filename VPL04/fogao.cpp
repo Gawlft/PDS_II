@@ -14,8 +14,8 @@ Fogao::~Fogao(){
 
 int Fogao::get_numero_de_queimadores(){
     return _numero_de_queimadores;
-}
+};
 
 int Fogao::get_capacidade_forno(){
     return _capacidade_forno;
-}
+};
