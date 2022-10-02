@@ -60,22 +60,30 @@ void concatenar_string(string &begin, string end) {
 // 8) A funcao deve uma alocar um array com 10 posicoes e
 // inicializa-las com o identificador da sua posição
 void aloca_array(int** arr) {
-}
+  *arr = new int[10];
+  for(int i = 0; i < 10; i++){
+    arr[0][i] = i;
+  }
+};
 
 // 9) A funcao deve exibir os valores armazenados em um array
 // Os valores devem ser separados por um espaco
 // Adicione uma quebra de linha após exibir os valores
 void exibe_array(int* arr) {
+  for (int i = 0; i < 10; i++)
+  cout << arr[i] << " " << endl;
 }
 
 // 10) A funcao deve adicionar o offset (pos) ao endereco (arr),
 // e retornar um ponteiro para a nova posicao
 int* retorna_addr_array_pos(int* arr, int pos) {
-  return 0;
+  arr = arr + pos;
+  return arr;
 }
 
 // 11) A funcao deve liberar a memória utilizada pelo array
 void libera_array(int* arr) {
+  delete arr;
 }
 
 int main(){
@@ -100,13 +108,13 @@ int main(){
   concatenar_string(text2, " It is really nice! =D");
   print_string(text2);
 
-  // int *array;
-  // aloca_array(&array);
-  // int *p6 = retorna_addr_array_pos(array, 6);
-  // *p6 = *p6 * *p6 * 3.1415;
-  // cout << "Position 6: " << *p6 << " -> " << (p6 - array) << endl;
-  // exibe_array(array);
-  // libera_array(array);
+  int *array;
+  aloca_array(&array);
+  int *p6 = retorna_addr_array_pos(array, 6);
+  *p6 = *p6 * *p6 * 3.1415;
+  cout << "Position 6: " << *p6 << " -> " << (p6 - array) << endl;
+  exibe_array(array);
+  libera_array(array);
 
   return 0;
 }
