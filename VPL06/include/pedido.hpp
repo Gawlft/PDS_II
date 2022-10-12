@@ -18,6 +18,9 @@ class Pedido {
    * @brief Destrutor da classe.
    * Aqui voce deve deletar os ponteiros contidos na lista _produtos
    */
+
+  // Pedido(std::list<Produto*> produtos, std::string endereco);
+  
   ~Pedido();
 
   /**
