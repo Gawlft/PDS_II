@@ -15,7 +15,7 @@ float Pizza::calcPreco() {
     bool special;
     std::string especial = "especial";
 
-    if (_flavor.find(especial) != std::string::npos) {
+    if (this->_flavor.find(especial) != std::string::npos) {
         special = true;
 }
     price = 5 * _n_slices + (10 * _creampie) + (8 * special) ;
