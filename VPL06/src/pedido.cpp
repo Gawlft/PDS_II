@@ -6,6 +6,8 @@
 #include <acai.hpp>
 #include <pizza.hpp>
 #include <produto.hpp>
+#include <sstream>
+
 
 // Pedido::Pedido(std::list<Produto* >products, std::string address){
 //  _produtos = products;
@@ -29,11 +31,14 @@ float Pedido::calculaTotal() const  {
   
 std::string Pedido::resumo() const{
 
-    std::list<Produto*>::iterator it;
+    std::string desc;
 
-    for(it == this->_produtos.begin(); it != this->_produtos.end(); it++){
-        
+    for(auto i : _produtos){
+        desc = desc + i->descricao();
+        desc = desc + "\n";      
     }
+
+    return desc;
 
 };
 
