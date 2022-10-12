@@ -1,6 +1,11 @@
 #include <iostream>
 #include <produto.hpp>
 #include<cachorro_quente.hpp>
+#include <vector>
+#include <string>
+#include <sstream>
+
+
 
 CachorroQuente::CachorroQuente(int n_sausages, std::vector<std::string> &toppings, bool pressed, int amount){
 
@@ -20,8 +25,21 @@ float CachorroQuente::calcPreco() {
 
 };
 
-std::string descricao(){
-    std::string descricao;
+std::string CachorroQuente::descricao() const{
+    std::string descricao;        
+    std::stringstream extras;
+
+    bool first = true;
+
+
+    for(auto i : this->_toppings)
+   {
+        if (!first) { extras << ","; }
+        first = false;
+        extras << i;
+   }
+
+    descricao = std::to_string(this->_quantidade) + "X" + " cachorro-quente com " + std::to_string(this->_n_sausages) + " salsicha(s), "  +  extras.str() + ".";
     return descricao;
 
 };

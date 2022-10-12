@@ -24,8 +24,16 @@ float Pizza::calcPreco() {
 
 };
 
-std::string descricao(){
+std::string Pizza::descricao() const{
     std::string descricao;
+    std::string borda_situation;
+    if(_creampie){
+        borda_situation = "";
+    }else{
+        borda_situation = "sem";
+    }           
+    descricao = std::to_string(this->_quantidade) + "X" + " pizza " + this->_flavor + " e " + borda_situation + " borda " + " recheada";
     return descricao;
 
 };
+
