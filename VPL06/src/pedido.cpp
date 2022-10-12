@@ -29,6 +29,12 @@ float Pedido::calculaTotal() const  {
   
 std::string Pedido::resumo() const{
 
+    std::list<Produto*>::iterator it;
+
+    for(it == this->_produtos.begin(); it != this->_produtos.end(); it++){
+        
+    }
+
 };
 
 void Pedido::setEndereco(const std::string& endereco){
