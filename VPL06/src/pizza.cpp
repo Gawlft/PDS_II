@@ -34,7 +34,7 @@ std::string Pizza::descricao() const{
     }else{
         borda_situation = "sem";
     }           
-    descricao = std::to_string(this->_quantidade) + "X" + " pizza " + this->_flavor + " e " + borda_situation + "borda" + " recheada";
+    descricao = std::to_string(this->_quantidade) + "X" + " pizza " + this->_flavor + ", " + std::to_string(this->_n_slices) + " pedaços" + " e " + borda_situation + "borda" + " recheada.";
     return descricao;
 
 };
