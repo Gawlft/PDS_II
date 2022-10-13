@@ -7,6 +7,7 @@ Pizza::Pizza(const std::string& flavor, int n_slices, bool creampie, int amount)
     _n_slices = n_slices;
     _creampie = creampie;
     _quantidade = amount;
+    _valor_unitario=calcPreco();
 
 };
 
@@ -32,7 +33,7 @@ std::string Pizza::descricao() const{
     }else{
         borda_situation = "sem";
     }           
-    descricao = std::to_string(this->_quantidade) + "X" + " pizza " + this->_flavor + " e " + borda_situation + " borda " + " recheada";
+    descricao = std::to_string(this->_quantidade) + "X" + " pizza " + this->_flavor + " e " + borda_situation + "borda" + " recheada";
     return descricao;
 
 };

@@ -13,6 +13,8 @@ CachorroQuente::CachorroQuente(int n_sausages, std::vector<std::string> &topping
     _toppings = toppings;
     _pressed = pressed;
     _quantidade = amount;
+    _valor_unitario=calcPreco();
+
 
 }
 
@@ -34,7 +36,7 @@ std::string CachorroQuente::descricao() const{
 
     for(auto i : this->_toppings)
    {
-        if (!first) { extras << ","; }
+        if (!first) { extras << ", "; }
         first = false;
         extras << i;
    }

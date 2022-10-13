@@ -1,10 +1,6 @@
 #include <iostream>
 #include <produto.hpp>
 
-
-Produto::~Produto(){
-};
-
 int Produto::getQtd() const{
     return _quantidade;
 };

@@ -9,6 +9,8 @@ Acai::Acai(int size, std::vector<std::string> &toppings, int amount){
     _size = size;
     _toppings = toppings;
     _quantidade = amount;
+    _valor_unitario=calcPreco();
+
 };
 
 
@@ -28,7 +30,7 @@ std::string Acai::descricao() const{
 
     for(auto i : this->_toppings)
    {
-        if (!first) { extras << ","; }
+        if (!first) { extras << ", "; }
         first = false;
         extras << i;
    }

@@ -22,9 +22,10 @@ void Pedido::adicionaProduto(Produto* p){
 
 
 float Pedido::calculaTotal() const  {
-    float price;
-    for(auto i : this->_produtos){
-        price = i->getValor() + price;
+    float price = 0;
+    for(Produto* i : this->_produtos){
+        price+=i->calcPreco()*i->getQtd();
+        std::cout << price << std::endl;
     }
     return price;
 };
