@@ -22,6 +22,7 @@ void Venda::imprimeRelatorio() const{
 		order_n++;
     }
 	std::cout << "Relatório de Vendas" << std::endl;
+	std::cout << std::fixed << std::setprecision(2);
 	std::cout << "Total de vendas: R$" << price << std::endl;;
 	std::cout << "Total de pedidos: " << _pedidos.size() << std::endl;;
 }
