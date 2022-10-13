@@ -9,11 +9,12 @@ Pizza::Pizza(const std::string& flavor, int n_slices, bool creampie, int amount)
     _quantidade = amount;
     _valor_unitario=calcPreco();
 
+
 };
 
 float Pizza::calcPreco() {
     float price;
-    bool special;
+    bool special = false;
     std::string especial = "especial";
 
     if (this->_flavor.find(especial) != std::string::npos) {
