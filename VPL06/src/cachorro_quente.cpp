@@ -33,7 +33,6 @@ std::string CachorroQuente::descricao() const{
 
     bool first = true;
 
-
     for(auto i : this->_toppings)
    {
         if (!first) { extras << ", "; }
@@ -41,7 +40,14 @@ std::string CachorroQuente::descricao() const{
         extras << i;
    }
 
+       if(_pressed){
+
+        descricao = std::to_string(this->_quantidade) + "X" + " cachorro-quente" + " prensado" + " com " + std::to_string(this->_n_sausages) + " salsicha(s), "  +  extras.str() + ".";
+        
+    }else{
+
     descricao = std::to_string(this->_quantidade) + "X" + " cachorro-quente com " + std::to_string(this->_n_sausages) + " salsicha(s), "  +  extras.str() + ".";
+    }
     return descricao;
 
 };

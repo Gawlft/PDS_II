@@ -35,6 +35,6 @@ std::string Acai::descricao() const{
         extras << i;
    }
 
-    descricao = std::to_string(this->_quantidade) + "X" + " açaí " + std::to_string(this->_size) + " ml " +  " com " +  extras.str() + ".";
+    descricao = std::to_string(this->_quantidade) + "X" + " açai " + std::to_string(this->_size) + "ml " +  "com " +  extras.str() + ".";
     return descricao;
 };

@@ -37,7 +37,7 @@ std::string Pedido::resumo() const{
         desc = desc + i->descricao();
         desc = desc + "\n";      
     }
-
+    desc = desc + "Endereço: " + _endereco + "\n";
     return desc;
 
 };

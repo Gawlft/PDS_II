@@ -30,11 +30,11 @@ std::string Pizza::descricao() const{
     std::string descricao;
     std::string borda_situation;
     if(_creampie){
-        borda_situation = "";
+        descricao = std::to_string(this->_quantidade) + "X" + " pizza " + this->_flavor + ", " + std::to_string(this->_n_slices) + " pedaços" + " e" + " borda" + " recheada.";
     }else{
-        borda_situation = "sem";
+        descricao = std::to_string(this->_quantidade) + "X" + " pizza " + this->_flavor + ", " + std::to_string(this->_n_slices) + " pedaços"  + " sem borda" + " recheada.";
     }           
-    descricao = std::to_string(this->_quantidade) + "X" + " pizza " + this->_flavor + ", " + std::to_string(this->_n_slices) + " pedaços" + " e " + borda_situation + "borda" + " recheada.";
+   
     return descricao;
 
 };
