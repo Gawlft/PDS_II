@@ -25,7 +25,6 @@ float Pedido::calculaTotal() const  {
     float price = 0;
     for(Produto* i : this->_produtos){
         price+=i->calcPreco()*i->getQtd();
-        std::cout << price << std::endl;
     }
     return price;
 };
